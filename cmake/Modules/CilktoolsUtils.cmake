@@ -314,8 +314,8 @@ macro(construct_cilktools_default_triple)
     endif()
     set(CILKTOOLS_DEFAULT_TARGET_TRIPLE ${CMAKE_C_COMPILER_TARGET})
   else()
-    set(CILKTOOLS_DEFAULT_TARGET_TRIPLE ${TARGET_TRIPLE} CACHE STRING
-          "Default triple for which cilktools runtimes will be built.")
+    set(CILKTOOLS_DEFAULT_TARGET_TRIPLE ${LLVM_TARGET_TRIPLE} CACHE STRING
+          "Default triple for which cilktools runtimes will be built." FORCE)
   endif()
 
   if(DEFINED CILKTOOLS_TEST_TARGET_TRIPLE)
